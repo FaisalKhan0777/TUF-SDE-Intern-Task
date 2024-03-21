@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Entries</title>
+</head>
+<body>
+    <h1>Submitted Entries</h1>
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Language</th>
+            <th>Stdin</th>
+            <th>Code (First 100 chars)</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for snippet in snippets %}
+        <tr>
+            <td>{{ snippet.username }}</td>
+            <td>{{ snippet.language }}</td>
+            <td>{{ snippet.stdin }}</td>
+            <td>{{ snippet.code[:100] }}</td>
+            <td>{{ snippet.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
