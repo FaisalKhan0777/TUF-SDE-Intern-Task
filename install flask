@@ -1,0 +1,6 @@
+To create a web application that facilitates the submission and display of code snippets with MySQL as the database backend, we'll use Flask for the backend and HTML/CSS/JavaScript for the frontend. We'll also use SQLAlchemy as an ORM to interact with the MySQL database.
+
+First, ensure you have Flask, Flask-SQLAlchemy, and MySQL Connector installed. You can install them via pip:
+
+
+pip install Flask Flask-SQLAlchemy mysql-connector-python
