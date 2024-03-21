@@ -4,26 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submitted Entries</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <h1>Submitted Entries</h1>
     <table>
         <tr>
             <th>Username</th>
-            <th>Language</th>
-            <th>Stdin</th>
-            <th>Code (First 100 chars)</th>
+            <th>Code Language</th>
+            <th>Standard Input</th>
+            <th>Source Code (First 100 chars)</th>
             <th>Timestamp</th>
         </tr>
-        {% for snippet in snippets %}
+        
         <tr>
-            <td>{{ snippet.username }}</td>
-            <td>{{ snippet.language }}</td>
-            <td>{{ snippet.stdin }}</td>
-            <td>{{ snippet.code[:100] }}</td>
-            <td>{{ snippet.timestamp }}</td>
+            <td>{ snippet.username }</td>
+            <td>{ snippet.language }</td>
+            <td>{ snippet.stdin }</td>
+            <td>{ snippet.code[:100] }</td>
+            <td>{ snippet.timestamp }</td>
         </tr>
-        {% endfor %}
+    
     </table>
 </body>
 </html>
